@@ -19,7 +19,9 @@ func make_2D_array():
 	return array
 
 
-func _on_grid_make_ice(board_position):
+
+
+func _on_Grid_make_ice(board_position):
 	if ice_pieces.size()==0:
 		ice_pieces = make_2D_array()
 	var current = ice.instance()
@@ -30,7 +32,8 @@ func _on_grid_make_ice(board_position):
 	pass # Replace with function body.
 
 
-func _on_grid_damage_ice(board_position):
+
+func _on_Grid_damage_ice(board_position):
 	if ice_pieces[board_position.x][board_position.y] != null:
 		ice_pieces[board_position.x][board_position.y].take_damage(1)
 		if ice_pieces[board_position.x][board_position.y].health <= 0:

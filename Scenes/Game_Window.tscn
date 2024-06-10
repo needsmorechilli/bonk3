@@ -60,6 +60,8 @@ one_shot = true
 wait_time = 0.5
 one_shot = true
 
+[connection signal="damage_ice" from="Grid" to="IceHolder" method="_on_Grid_damage_ice"]
+[connection signal="make_ice" from="Grid" to="IceHolder" method="_on_Grid_make_ice"]
 [connection signal="timeout" from="Destroy_Timer" to="Grid" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Collapse_Timer" to="Grid" method="_on_Collapse_Timer_timeout"]
 [connection signal="timeout" from="Refill_Timer" to="Grid" method="_on_Refill_Timer_timeout"]
